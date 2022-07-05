@@ -18,9 +18,12 @@ app.use(express.static(path.join(__dirname , '/Public')));
 app.set('views', './src/views/');
 app.set('view engine','ejs');
 
+app.use(express.static(path.join(__dirname, 'src/views')));
+
+
 
 app.get("/" , (req,res)=>{
-    res.render('index');
+    res.render(path.join(__dirname, 'src/views/index.ejs'));
 })
 
 app.post("/post" , (req,res)=>{
