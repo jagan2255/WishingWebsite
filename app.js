@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const wishdata = require("./src/Model/userdata")
 
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname , '/public'))); 
 app.set('view engine','ejs');
 app.set('views','./src/views');
 
