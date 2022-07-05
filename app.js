@@ -13,17 +13,15 @@ app.use(express.urlencoded({ extended: true }));
 
 const wishdata = require("./src/Model/userdata")
 
+app.use(express.static(path.join(__dirname , '/src/views'))); 
 app.use(express.static(path.join(__dirname , '/Public'))); 
-
 app.set('views', './src/views/');
 app.set('view engine','ejs');
-
-app.use(express.static(path.join(__dirname, 'src/views')));
 
 
 
 app.get("/" , (req,res)=>{
-    res.sendFile(path.join(__dirname, 'src/views/index.ejs'));
+    res.sendFile("/index.ejs");
 })
 
 app.post("/post" , (req,res)=>{
