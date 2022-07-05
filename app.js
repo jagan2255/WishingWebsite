@@ -13,7 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 
 const wishdata = require("./src/Model/userdata")
 
-app.use(express.static(path.join(__dirname , '/src/views'))); 
 app.use(express.static(path.join(__dirname , '/Public'))); 
 app.set('views', './src/views/');
 app.set('view engine','ejs');
@@ -21,7 +20,7 @@ app.set('view engine','ejs');
 
 
 app.get("/" , (req,res)=>{
-    res.sendFile("index");
+    res.render("index");
 })
 
 app.post("/post" , (req,res)=>{
