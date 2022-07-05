@@ -18,7 +18,7 @@ app.set('view engine','ejs');
 app.set('views','./src/views');
 
 app.get("/" , (req,res)=>{
-    res.render("index");
+    res.render('index');
 })
 
 app.post("/post" , (req,res)=>{
