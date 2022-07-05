@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'src/views')));
 
 
 app.get("/" , (req,res)=>{
-    res.render(path.join(__dirname, 'src/views/index.ejs'));
+    res.sendFile(path.join(__dirname, 'src/views/index.ejs'));
 })
 
 app.post("/post" , (req,res)=>{
