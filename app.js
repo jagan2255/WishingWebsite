@@ -15,10 +15,12 @@ const wishdata = require("./src/Model/userdata")
 
 app.use(express.static(path.join(__dirname , '/Public'))); 
 app.set('view engine','ejs');
-app.set('views','./src/views');
+//app.set('views','./src/views');
+app.set('views', __dirname + '/src/views');
+
 
 app.get("/" , (req,res)=>{
-    res.render('index');
+    res.render('index.ejs');
 })
 
 app.post("/post" , (req,res)=>{
