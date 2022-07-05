@@ -15,12 +15,12 @@ const wishdata = require("./src/Model/userdata")
 
 app.use(express.static(path.join(__dirname , '/Public'))); 
 
-app.set('views', './src/views');
+app.set('views', './src/views/');
 app.set('view engine','ejs');
 
 
 app.get("/" , (req,res)=>{
-    res.render('/index');
+    res.render('index');
 })
 
 app.post("/post" , (req,res)=>{
@@ -41,7 +41,7 @@ app.post("/post" , (req,res)=>{
             console.log(err)
         }
         else{
-            res.render('/greeting',{item});
+            res.render('greeting',{item});
         }
         console.log(item)
     }) 
@@ -52,7 +52,7 @@ app.get("/wish/:id" , (req,res)=>{
     var id = req.params.id;
     wishdata.findOne({_id: id})
   .then((user)=>{  
-  res.render("/wish",{user});
+  res.render("wish",{user});
   })
  
 });
@@ -84,12 +84,12 @@ app.get("/mailer/:id" , (req,res)=>{
     mailTransporter.sendMail(mailDetails, function(err, data) {
         if(err) {
             console.log(err);
-            res.render("/Error")
+            res.render("Error")
 
         } else {
             console.log(mailDetails);
             console.log('Email sent successfully');
-            res.render("/success")
+            res.render("success")
         }
     });
     })
