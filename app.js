@@ -21,7 +21,7 @@ app.set('view engine','ejs');
 
 
 app.get("/" , (req,res)=>{
-    res.send("index");
+    res.sendFile("index");
 })
 
 app.post("/post" , (req,res)=>{
