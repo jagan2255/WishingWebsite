@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap');
+
+.index{
+    background-image: url('https://i.gifer.com/IrF.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 101vh;
+    padding-top: 40px;
+
+}
+
+.center{
+    text-align: center;
+  }
+  .center h2 {
+    color: rgba(255,0,0,0.1);
+    font-size: 80px;
+    font-weight: 700;
+    background-size: cover;
+    background-image: url(https://s3.envato.com/files/223920975/Low%20Poly%20Colorful%20Background%20Preview.jpg);
+    -webkit-background-clip: text;
+    animation: background-text-animation 15s linear infinite;
+  }
+  @keyframes background-text-animation {
+    0%{
+      background-position: left 0px top 50%;
+    }
+    50%{
+      background-position: left 1500px top 50%;
+    }
+    100%{
+      background-position: left 0px top 50%;
+    }
+  }
+
+  #snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1000;
+}

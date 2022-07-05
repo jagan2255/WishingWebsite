@@ -1,0 +1,20 @@
+.index{
+    background-image: url('https://pro2-bar-s3-cdn-cf2.myportfolio.com/4d29a4ffc41663d7f15cc554c9e98126/3996a582-812c-40bd-8260-10c3952d31f5_rw_1200.gif?h=17df67a0c8e01e8447922bce66f7bae6');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.form{
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
