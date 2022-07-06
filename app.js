@@ -68,14 +68,14 @@ app.get("/mailer/:id" , (req,res)=>{
     let mailTransporter = nodeMailer.createTransport({
         service: 'hotmail',
         auth: {
-            user: 'wishinganonymous2020@outlook.com',
-            pass: 'b__MZEeY&f5G+s'
+            user: 'yourmail@outlook.com',
+            pass: 'yourpassword'
         }
     });
       
 
     let mailDetails = {
-        from: 'wishinganonymous2020@outlook.com',
+        from: 'yourmail@outlook.com',
         to: user.email,
         subject: 'Happy 2022 Wish from '+ user.yname,
         text: 'You have received a Suprise gift from ' + user.yname +' please click on the link to view it https://wishing-website2022.herokuapp.com/wish/'+user._id
